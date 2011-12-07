@@ -8,6 +8,11 @@ jQuery(document).ready(function($) {
         return false;
     }); 
 
+    $("#searchform").submit(function(e) {
+        location.hash = '?s=' + $("#s").val();
+        e.preventDefault();
+    }); 
+
     $(window).bind('hashchange', function(){
         url = window.location.hash.substring(1); 
 
@@ -16,9 +21,9 @@ jQuery(document).ready(function($) {
         } 
 
         url = url + " #content_wrap"; 
-		console.log(url);
-        $mainContent.html('').load(url, function() {
-            // $mainContent.animate({opacity: "1"});
+
+        $mainContent.animate({opacity: "0.1"}).html('<p>Please wait...</>').load(url, function() {
+            $mainContent.animate({opacity: "1"});
         });
     });
 

@@ -12,9 +12,12 @@ Page: footer.php
 ?>
 	</div> <!--.container-->
 </div> <!--#content_wrap-->
-<div id="footer" class="clearboth">
-	<div class="container">
-		<div class="left"><a href="sitemap.xml">Search Engine Site Map</a></div>
+<!-- <hr/ id="blueline_top" class="clearboth"> -->
+<div id="footer" class="clearboth blueline_top">
+	<div class="container" id="footer_container">
+		<div class="left">
+			<?php wp_list_categories("title_li=&"); ?>
+		</div>
 		<div class="right"><a href="http://1updesign.org">Design by 1UP</a> | Copyrite © 2011</div>
 	</div>
 </div>

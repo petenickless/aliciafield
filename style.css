@@ -4,16 +4,30 @@ body {
 }
 
 body {
-	background-color:#F2F2F2;
+/*	background-color:#F2F2F2;*/
 }
 
 * {
 	font-family:Myriad pro, helvetica, arial, serif;
 }
 /*Shared*/
-.blueline {
+.blueline_bottom {
 	border-bottom:1px solid #662D91;
 	box-shadow:0 1px 0 #C9C9C9;
+}
+
+.blueline_top {
+	border-top:1px solid #662D91;
+	box-shadow:0 1px 0 #C9C9C9;
+}
+
+hr {
+	color: #662D91;
+	margin-bottom: 0.2em;
+}
+
+li {
+	list-style-image:url('assets/images/bullet.png');
 }
 
 /*Header*/
@@ -40,8 +54,36 @@ body {
 /*Sidebar*/
 
 #sidebar {
-    float: right;
-    position: relative;
+    position: absolute;
+    right: 0;
     top: -28px;
     width: 164px;
+    z-index: 3;
+}
+
+/*Content*/
+
+#content_wrap {
+	min-height: 474px;
+	background-color:#F2F2F2;
+}
+
+/*Footer*/
+
+#footer {
+    background-color:#fff;
+	height:100%;
+	overflow:auto;
+	box-shadow:none !important;
+}
+
+#footer_container {
+    padding-top: 0.8em;
+}
+
+#footer #footer_container .left .cat-item a,  #footer #footer_container .right{
+    font-size: 0.8em;
+    font-style: oblique;
+	text-decoration:none;
+	color:black;
 }

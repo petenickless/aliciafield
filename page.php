@@ -12,8 +12,6 @@ Page: home.php
 ?>
 <?php get_header(); ?>
 
-<?php get_sidebar(); ?>
-
 <?php $id = $post->ID; 	$page_data = get_page($id);?>
 	<div id="post_content">
 		<h1><?php echo $page_data->post_title; ?></h1>
