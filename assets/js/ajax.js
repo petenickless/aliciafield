@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 
         url = url + " #content_wrap"; 
 
-        $mainContent.animate({opacity: "0.1"}).html('<p>Please wait...</>').load(url, function() {
+        $mainContent.css("opacity", "0").load(url, function() {
             $mainContent.animate({opacity: "1"});
         });
     });

@@ -13,12 +13,12 @@ body {
 /*Shared*/
 .blueline_bottom {
 	border-bottom:1px solid #662D91;
-	box-shadow:0 1px 0 #C9C9C9;
+	box-shadow:0 1px 1px #C9C9C9;
 }
 
 .blueline_top {
 	border-top:1px solid #662D91;
-	box-shadow:0 1px 0 #C9C9C9;
+    box-shadow: 0 -1px 1px #C9C9C9;
 }
 
 hr {
@@ -34,6 +34,7 @@ li {
 	#header {
 		height: 42px;
 		background-color: #FFFFFF;
+		position: relative;
 	}
 
 	/*Nav*/
@@ -53,37 +54,45 @@ li {
 		}
 /*Sidebar*/
 
-#sidebar {
-    position: absolute;
-    right: 0;
-    top: -28px;
-    width: 164px;
-    z-index: 3;
-}
+	#sidebar {
+	    position: absolute;
+	    right: 0;
+	    top: -28px;
+	    width: 164px;
+	    z-index: 3;
+	}
 
 /*Content*/
 
-#content_wrap {
-	min-height: 474px;
-	background-color:#F2F2F2;
-}
+	#content_wrap {
+		min-height: 474px;
+		background-color:#F2F2F2;
+		padding-top:0.6em;
+	}
+	
+/*Home*/
+
+	#slider_wrap {
+		width:760px;
+		height:460px;
+	}
 
 /*Footer*/
 
-#footer {
-    background-color:#fff;
-	height:100%;
-	overflow:auto;
-	box-shadow:none !important;
-}
+	#footer {
+	    background-color:#fff;
+		height:100%;
+		overflow:auto;
+/*		box-shadow:none !important;*/
+	}
 
-#footer_container {
-    padding-top: 0.8em;
-}
+	#footer_container {
+	    padding-top: 0.8em;
+	}
 
-#footer #footer_container .left .cat-item a,  #footer #footer_container .right{
-    font-size: 0.8em;
-    font-style: oblique;
-	text-decoration:none;
-	color:black;
-}
+	#footer #footer_container .left .cat-item a,  #footer #footer_container .right{
+	    font-size: 0.8em;
+	    font-style: oblique;
+		text-decoration:none;
+		color:black;
+	}
