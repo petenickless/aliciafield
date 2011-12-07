@@ -34,15 +34,24 @@
 	</title>
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/reset.css" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/usefulstyle.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" />
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/jquery.ba-hashchange.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/ajax.js"></script>
 	
 	<?php wp_head(); ?>
 </head>
 <body>
 	<div id="wrap">
 		<div id="header">
-			<div id="navigation"><?php wp_list_pages('exclude=&depth=1&title_li'); ?></div>
+			<div class="container">
+				<div id="navigation"><?php wp_list_pages('exclude=&depth=1&title_li'); ?></div>
+			</div>
 		</div> <!--#header-->
+		<div id="content_wrap">
 	
 	
 	

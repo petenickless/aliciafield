@@ -14,10 +14,12 @@ Page: single.php
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<div id="post_content">
 	<?php the_title(); ?>
 	<?php the_time('j M Y'); ?>
 	<?php the_content(); ?>
 	<?php the_category(', '); ?> <?php if(has_tag()) echo" and tagged with: "; the_tags(''); ?>
+	</div>
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

@@ -1,4 +1,5 @@
 <?php
+
 if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'featured-artist-image-thumb', 100, false );
@@ -10,6 +11,9 @@ return $id = $idObj->term_id;
 }
 
 function p($objoect) {
+	?><pre><?php
 	print_r("jfafafa");
+	?></pre><?php
 }
+
 ?>
