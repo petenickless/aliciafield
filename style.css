@@ -1,0 +1,47 @@
+body {
+	background-image:url('assets/images/website3.png');
+	background-position:center top;
+}
+
+body {
+	background-color:#F2F2F2;
+}
+
+* {
+	font-family:Myriad pro, helvetica, arial, serif;
+}
+/*Shared*/
+.blueline {
+	border-bottom:1px solid #662D91;
+	box-shadow:0 1px 0 #C9C9C9;
+}
+
+/*Header*/
+	#header {
+		height: 42px;
+		background-color: #FFFFFF;
+	}
+
+	/*Nav*/
+		#navigation {
+			padding-top:1em;
+		}
+
+		#navigation li a {
+			text-decoration:none;
+			color:#B3B3B3;
+		} 
+
+		#navigation .page_item_title {
+			float:left;
+			list-style:none;
+			margin-right:3em;
+		}
+/*Sidebar*/
+
+#sidebar {
+    float: right;
+    position: relative;
+    top: -28px;
+    width: 164px;
+}

@@ -17,8 +17,8 @@ jQuery(document).ready(function($) {
 
         url = url + " #content_wrap"; 
 		console.log(url);
-        $mainContent.animate({opacity: "0.1"}).html('<p>Please wait...</>').load(url, function() {
-            $mainContent.animate({opacity: "1"});
+        $mainContent.html('').load(url, function() {
+            // $mainContent.animate({opacity: "1"});
         });
     });
 

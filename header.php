@@ -46,12 +46,13 @@
 </head>
 <body>
 	<div id="wrap">
-		<div id="header">
+		<div id="header" class="blueline">
 			<div class="container">
-				<div id="navigation"><?php wp_list_pages('exclude=&depth=1&title_li'); ?></div>
+				<div id="navigation"><?php custom_wp_list_pages('exclude=&depth=1&title_li&sort_column=menu_order'); ?></div>
 			</div>
 		</div> <!--#header-->
-		<div id="content_wrap">
+		<div id="content_wrap" class="clearboth">
+			<div class="container">
 	
 	
 	

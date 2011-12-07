@@ -16,4 +16,15 @@ function p($objoect) {
 	?></pre><?php
 }
 
+function custom_wp_list_pages($args){
+	$pages = get_pages($args);
+	foreach($pages as $page) {
+		$custom = get_post_custom($page->ID);
+		$ul = "<li class='page_item_title' id='".$page->ID."'><a href='/".$page->post_name."'>";
+		$ul .= strtoupper($page->post_title);
+		$ul .= "</a></ul>";
+		print $ul;
+	}
+}
+
 ?>
