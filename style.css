@@ -82,8 +82,8 @@ li {
 	#footer {
 	    background-color:#fff;
 		height:100%;
-		overflow:auto;
-/*		box-shadow:none !important;*/
+		z-index:1;
+		position:relative;
 	}
 
 	#footer_container {
