@@ -2,7 +2,7 @@
 
 if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'featured-artist-image-thumb', 100, false );
+	add_image_size( 'home-slider', 760, false );
 }
 
 function get_catID($slug) {
@@ -26,5 +26,34 @@ function custom_wp_list_pages($args){
 		print $ul;
 	}
 }
-
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+	register_post_type( 'slider',
+		array(
+			'labels' => array(
+				'name' => __( 'Slider' ),
+				'singular_name' => __( 'Slider' )
+			),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'slider'),
+		'taxonomies' => array('post_tag'), // this is IMPORTANT
+		'supports' => array('title','thumbnail')
+		)
+	);
+	
+	register_post_type( 'news',
+		array(
+			'labels' => array(
+				'name' => __( 'News' ),
+				'singular_name' => __( 'News' )
+			),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'news'),
+		'taxonomies' => array('post_tag'), // this is IMPORTANT
+		'supports' => array('title','thumbnail','editor')
+		)
+	);
+}
 ?>

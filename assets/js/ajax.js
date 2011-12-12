@@ -1,3 +1,17 @@
+function load_scroller(){
+	jQuery('#slider_wrap').cycle({ 
+        fx:     'fade', 
+        speed:  'slow', 
+        timeout: 0, 
+        pager:  '#slider_nav', 
+
+        // callback fn that creates a thumbnail to use as pager anchor 
+        pagerAnchorBuilder: function(idx, slide) { 
+            return '<div class="thumb"><a href="#"><img src="' + slide.src + '" height="43" /></a></div>'; 
+        } 
+    });
+}
+
 jQuery(document).ready(function($) {
     var $mainContent = $("#post_content"),
         siteUrl = "http://" + top.location.host.toString(),
@@ -24,6 +38,7 @@ jQuery(document).ready(function($) {
 
         $mainContent.css("opacity", "0").load(url, function() {
             $mainContent.animate({opacity: "1"});
+			load_scroller();
         });
     });
 

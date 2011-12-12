@@ -37,11 +37,12 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/usefulstyle.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" />
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
-	
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+	-->	
+	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/jquery.js"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/jquery.ba-hashchange.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/ajax.js"></script>
-	
+	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/jquery.cycle.all.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -52,7 +53,9 @@
 			</div>
 		</div> <!--#header-->
 		<div class="container">
-			<?php get_sidebar(); ?>
+			<div id="logo">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/afp_logo.png" width="144" height="121" alt="Afp Logo">
+			</div>
 		</div>
 		<div id="content_wrap" class="clearboth">
 			<div class="container">

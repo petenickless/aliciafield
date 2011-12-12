@@ -10,6 +10,12 @@ body {
 * {
 	font-family:Myriad pro, helvetica, arial, serif;
 }
+
+a{
+	color:#662D91;
+	font-weight:bold;
+	text-decoration:none;
+}
 /*Shared*/
 .blueline_bottom {
 	border-bottom:1px solid #662D91;
@@ -28,6 +34,14 @@ hr {
 
 li {
 	list-style-image:url('assets/images/bullet.png');
+}
+
+#title {
+	color: #B3B3B3;
+    text-decoration: none;
+    border-bottom: 1px solid #662D91;
+    box-shadow: 0 1px 1px #C9C9C9;
+	display: block;
 }
 
 /*Header*/
@@ -54,7 +68,7 @@ li {
 		}
 /*Sidebar*/
 
-	#sidebar {
+	#logo {
 	    position: absolute;
 	    right: 0;
 	    top: -28px;
@@ -70,12 +84,56 @@ li {
 		padding-top:0.6em;
 	}
 	
+	#lh_content {
+		float:left;
+	}
+	
+	#rh_sidebar {
+		float:right;
+		width:10em;
+		margin-top: 85px;
+	}
+	
 /*Home*/
 
-	#slider_wrap {
-		width:760px;
-		height:460px;
+	#hp_latest_news ul li {
+	    font-size: 0.75em;
+	    margin-left: 1em;
 	}
+	
+	#hp_latest_news ul li a {
+		color:#662D91;
+		font-weight:bold;
+		text-decoration:none;
+	}
+	
+	#hp_latest_news ul .hp_date {
+		font-size:0.7em;
+		padding-bottom:0.2em;
+	}
+
+	/*Slider*/
+		#slider_wrap {
+			width:760px;
+			height:460px;
+			overflow:hidden;
+		}
+		
+		#slider_frame {
+		    box-shadow: 0 0 1px #C9C9C9 inset;
+		    height: 460px;
+		    position: absolute;
+		    width: 760px;
+		    z-index: 99;
+			border:1px solid #662D91;
+		}
+		
+		.thumb {
+		    float: left;
+		    margin-right: 3px;
+		    overflow: hidden;
+		    width: 43px;
+		}
 
 /*Footer*/
 

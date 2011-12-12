@@ -10,6 +10,3 @@ Page: sidebar.php
 */
 
 ?>
-	<div id="sidebar">
-		<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/afp_logo.png" width="144" height="121" alt="Afp Logo">
-	</div><!-- #sidebar-->

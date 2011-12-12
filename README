@@ -2,3 +2,44 @@ Make gallery with
 
 http://jquery.malsup.com/cycle/pager2.html
 
+$('#slideshow').before('<ul id="nav">').cycle({ 
+    fx:     'turnDown', 
+    speed:  'fast', 
+    timeout: 0, 
+    pager:  '#nav', 
+     
+    // callback fn that creates a thumbnail to use as pager anchor 
+    pagerAnchorBuilder: function(idx, slide) { 
+        return '<li><a href="#"><img src="' + slide.src + '" width="50" height="50" /></a></li>'; 
+    } 
+});
+
+#slideshow { left: 20px }
+#nav { width: 300px; margin: 15px }
+#nav li { width: 50px; float: left; margin: 8px; list-style: none }
+#nav a { width: 50px; padding: 3px; display: block; border: 1px solid #ccc; }
+#nav li.activeSlide a { background: #88f }
+#nav a:focus { outline: none; }
+#nav img { border: none; display: block }
+
+
+Upload limit issues...
+
+1) First limit is usually 3 Mb by default and is changed in the php.ini file at the host level.
+Place this in your php.ini file in your root directory of your WordPress install (usually /public_html)
+memory_limit = 32M
+upload_max_filesize = 100M
+upload_max_filesize = 100M
+post_max_size = 100M
+
+note: 100M is entirely too much for most use, this is to enable an upload of the largest file size possible through a web page!
+
+Safer settings:
+
+upload_max_filesize=5M and 20M
+post_max_file_size=20M
+2) I also had to do this to get the php interpretor to recognize the change and allow large files to be uploaded by adding this to the .htaccess file also in the root directory of my webserver for WordPress:
+SetEnv PHPRC /home/yourusername/public_html
+
+A temporary way to increase PHP’s memory is to add this to your PHP script, I prefer to set it above:
+ini_set("memory_limit","12M");
