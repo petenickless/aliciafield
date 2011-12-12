@@ -1,8 +1,8 @@
 function load_scroller(){
 	jQuery('#slider_wrap').cycle({ 
-        fx:     'fade', 
+        fx:     'scrollRight', 
         speed:  'slow', 
-        timeout: 0, 
+        timeout: 5000, 
         pager:  '#slider_nav', 
 
         // callback fn that creates a thumbnail to use as pager anchor 

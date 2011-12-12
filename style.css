@@ -37,11 +37,19 @@ li {
 }
 
 #title {
-	color: #B3B3B3;
-    text-decoration: none;
     border-bottom: 1px solid #662D91;
-    box-shadow: 0 1px 1px #C9C9C9;
-	display: block;
+    box-shadow: 0 1px 0px #C9C9C9;
+    color: #B3B3B3;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+#title:after {
+    content: url("assets/images/identifier.png");
+    left: 1em;
+    position: absolute;
+    top: 0.55em;
 }
 
 /*Header*/
@@ -72,14 +80,14 @@ li {
 	    position: absolute;
 	    right: 0;
 	    top: -28px;
-	    width: 164px;
+	    width: 185px;
 	    z-index: 3;
 	}
 
 /*Content*/
 
 	#content_wrap {
-		min-height: 474px;
+		min-height: 485px;
 		background-color:#F2F2F2;
 		padding-top:0.6em;
 	}
@@ -89,16 +97,22 @@ li {
 	}
 	
 	#rh_sidebar {
-		float:right;
-		width:10em;
-		margin-top: 85px;
+	    float: right;
+	    margin-top: 100px;
+	    width: 185px;
 	}
 	
 /*Home*/
 
+	#hp_latest_news {
+		margin-top:1.5em;
+	}
+
 	#hp_latest_news ul li {
 	    font-size: 0.75em;
+	    line-height: 1.5em;
 	    margin-left: 1em;
+	    text-indent: -0.2em;
 	}
 	
 	#hp_latest_news ul li a {
@@ -108,8 +122,15 @@ li {
 	}
 	
 	#hp_latest_news ul .hp_date {
-		font-size:0.7em;
+		font-size:0.51em;
 		padding-bottom:0.2em;
+	}
+	
+	#hp_about_me p {
+		margin-top:0.5em;
+		font-size:0.8em;
+		font-style:oblique;
+		line-height:1.2em;
 	}
 
 	/*Slider*/
@@ -126,6 +147,10 @@ li {
 		    width: 760px;
 		    z-index: 99;
 			border:1px solid #662D91;
+		}
+		
+		#slider_nav {
+			padding-bottom:3em;
 		}
 		
 		.thumb {

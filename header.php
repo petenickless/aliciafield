@@ -49,7 +49,7 @@
 	<div id="wrap">
 		<div id="header" class="blueline_bottom">
 			<div class="container">
-				<div id="navigation"><?php custom_wp_list_pages('exclude=&depth=1&title_li&sort_column=menu_order'); ?></div>
+				<div id="navigation"><?php custom_wp_list_pages('title_li=&sort_column=menu_order&parent=0'); ?></div>
 			</div>
 		</div> <!--#header-->
 		<div class="container">

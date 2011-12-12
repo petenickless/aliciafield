@@ -25,7 +25,7 @@ Template Name: Home
 			<span id="title">LATEST NEWS</span>
 			<ul>
 			<?php
-			$args = array( 'post_type' => 'news', 'posts_per_page' => -1 );
+			$args = array( 'post_type' => 'blog', 'posts_per_page' => -1 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				
@@ -37,6 +37,15 @@ Template Name: Home
 			<?php endwhile; ?>
 			</ul>
 			<?php wp_reset_query(); ?>
+			<BR/>
+		</div>
+		<div id="hp_about_me">
+			<span id="title">ABOUT ALICIA</span>
+			<?php 
+			$page = get_page_by_title( 'About (short)' );
+			setup_postdata($page);
+			the_content();
+			?>
 		</div>
 	</div>
 </div>
