@@ -14,8 +14,11 @@ Page: home.php
 
 <?php $id = $post->ID; 	$page_data = get_page($id);?>
 	<div id="post_content">
-		<h1><?php echo $page_data->post_title; ?></h1>
-		<?php echo $page_data->post_content; ?>
+		<div id="lh_content">
+			<?php setup_postdata($page_data); ?>
+			<span id="title"><?php echo strtoupper(get_the_title()); ?></span>
+			<?php the_content(); ?>
+		</div>
 	</div>
 
 <?php get_footer(); ?>

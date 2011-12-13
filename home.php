@@ -11,7 +11,7 @@ Template Name: Home
 		<div id="slider_frame"></div>
 		<div id="slider_wrap">
 			<?php
-			$args = array( 'post_type' => 'slider', 'posts_per_page' => -1 );
+			$args = array( 'post_type' => 'portfolio', 'posts_per_page' => -1 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				<?php the_post_thumbnail('home-slider'); ?>
@@ -28,7 +28,6 @@ Template Name: Home
 			$args = array( 'post_type' => 'blog', 'posts_per_page' => -1 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				
 				<span class="hp_date"><?php the_date(); ?></span>
 				<li>
 					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

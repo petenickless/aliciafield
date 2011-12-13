@@ -10,5 +10,9 @@ Page: archive.php
 */
 
 ?>
-
-<?php include('wp-content/themes/reggaecity/results.php') ?>
+<div id="post_content">
+	<div id="lh_content">
+		asdfasdf
+	</div>
+	
+</div>

@@ -3,6 +3,7 @@
 if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'home-slider', 760, false );
+	add_image_size( 'portfolio', 235, false );
 }
 
 function get_catID($slug) {
@@ -10,9 +11,9 @@ $idObj = get_category_by_slug($slug);
 return $id = $idObj->term_id;
 }
 
-function p($objoect) {
+function p($object) {
 	?><pre><?php
-	print_r("jfafafa");
+	print_r($object);
 	?></pre><?php
 }
 
@@ -28,16 +29,16 @@ function custom_wp_list_pages($args){
 }
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-	register_post_type( 'slider',
+	register_post_type( 'portfolio',
 		array(
 			'labels' => array(
-				'name' => __( 'Slider' ),
-				'singular_name' => __( 'Slider' )
+				'name' => __( 'Portfolio' ),
+				'singular_name' => __( 'Portolio' )
 			),
 		'public' => true,
 		'has_archive' => true,
-		'rewrite' => array('slug' => 'slider'),
-		'taxonomies' => array('post_tag'), // this is IMPORTANT
+		'rewrite' => array('slug' => 'portfolio'),
+		'taxonomies' => array('category'), // this is IMPORTANT
 		'supports' => array('title','thumbnail')
 		)
 	);

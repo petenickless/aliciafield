@@ -1,0 +1,21 @@
+<?php
+/*
+	Template name: Blog
+*/
+?>
+
+<?php get_header(); ?>
+<div id="post_content">
+	<div id="lh_content">
+		<?php
+		$args = array( 'post_type' => 'blog', 'posts_per_page' => -1 );
+		$loop = new WP_Query( $args );
+		while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+			<span id="title"><?php echo strtoupper(get_the_title()); ?></span>
+			<span id="lh_date"><?php the_date(); ?></span>
+			<?php the_content(); ?>
+		<?php endwhile; ?>
+	</div>
+</div>
+<?php get_footer(); ?>
