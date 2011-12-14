@@ -1,12 +1,3 @@
-body {
-	background-image:url('assets/images/website3.png');
-	background-position:center top;
-}
-
-body {
-/*	background-color:#F2F2F2;*/
-}
-
 * {
 	font-family:Myriad pro, helvetica, arial, serif;
 }
@@ -204,6 +195,7 @@ p {
 	    margin: 0 0 2px;
 	    position: relative;
 		padding:0 10px;
+		resize:none;
 	}
 	
 	#contact_form input:focus, #contact_form textarea:focus{
