@@ -12,8 +12,21 @@ function load_scroller(){
     });
 }
 
+function getPosition(){
+	current_page_id = $("#post_content").attr("class");
+	return pos = $("#"+current_page_id).position();
+}
+
+function positionNavId(){
+	getPosition();
+	left = pos.left + 10;
+	$("#marker").animate({
+		"left": left
+	});
+}
+
 jQuery(document).ready(function($) {
-    var $mainContent = $("#post_content"),
+    var $mainContent = $("#content_wrap"),
         siteUrl = "http://" + top.location.host.toString(),
         url = ''; 
 
@@ -38,6 +51,7 @@ jQuery(document).ready(function($) {
 
         $mainContent.css("opacity", "0").load(url, function() {
             $mainContent.animate({opacity: "1"});
+			positionNavId();
 			load_scroller();
         });
     });

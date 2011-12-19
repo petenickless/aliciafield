@@ -12,7 +12,7 @@ Page: single.php
 ?>
 
 <?php get_header(); ?>
-	<div id="post_content">
+	<div id="post_content" class="<?php echo $id; ?>">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<div id="lh_content">
 			<span id="title"><?php echo strtoupper(get_the_title()); ?></span>

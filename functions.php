@@ -21,7 +21,7 @@ function custom_wp_list_pages($args){
 	$pages = get_pages($args);
 	foreach($pages as $page) {
 		$custom = get_post_custom($page->ID);
-		$ul = "<li class='page_item_title' id='".$page->ID."'><a href='".get_bloginfo("url")."/".$page->post_name."'>";
+		$ul = "<li class='".$current." page_item_title' id='".$page->ID."'><a href='".get_bloginfo("url")."/".$page->post_name."'>";
 		$ul .= strtoupper($page->post_title);
 		$ul .= "</a></ul>";
 		print $ul;

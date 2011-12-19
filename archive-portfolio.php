@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<div id="post_content">
+<div id="post_content" class="9">
 	<div id="lh_content">
 		<?php $page_data = get_page_by_title("Portfolio");?>
 		<?php setup_postdata($page_data); ?>

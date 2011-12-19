@@ -6,8 +6,8 @@
 
 <?php get_header(); ?>
 
-<div id="post_content">
-	<div id="lh_content">
+<div id="post_content" class="<?php wp_reset_query(); echo $post->ID; ?>">
+	<div id="lh_content">	
 		<?php $page_data = get_page_by_title("Contact");?>
 		<?php setup_postdata($page_data); ?>
 		<?php the_content(); ?>

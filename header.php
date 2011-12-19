@@ -43,13 +43,16 @@
 	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/jquery.ba-hashchange.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/ajax.js"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/jquery.cycle.all.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/menu.js"></script>
 	<?php wp_head(); ?>
+
 </head>
 <body>
 	<div id="wrap">
 		<div id="header" class="blueline_bottom">
 			<div class="container">
 				<div id="navigation"><?php custom_wp_list_pages('title_li=&sort_column=menu_order&parent=0'); ?></div>
+				<div id="marker"></div>
 			</div>
 		</div> <!--#header-->
 		<div class="container">

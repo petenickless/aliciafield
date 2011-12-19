@@ -12,7 +12,7 @@ Page: category.php
 ?>
 <?php get_header(); ?>
 
-<div id="post_content">
+<div id="post_content" class="<?php wp_reset_query();  echo $post->ID; ?>">
 	<div id="lh_content">
 		<div id="slider_frame"></div>
 		<div id="slider_wrap">

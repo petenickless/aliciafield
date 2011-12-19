@@ -18,7 +18,7 @@ Page: footer.php
 		<div class="left">
 			<?php wp_list_categories("title_li=&exclude=1"); ?>
 		</div>
-		<div class="right"><a href="http://1updesign.org">Design by 1UP</a> | Copyrite © 2011</div>
+		<div class="right"><a href="http://1updesign.org">Design by 1UP</a> | Copywrite © 2011</div>
 	</div>
 </div>
 

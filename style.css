@@ -49,6 +49,16 @@ p {
     top: 0.55em;
 }
 
+#marker {
+	top:26px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #662D91;
+	position:relative;
+}
+
 /*Header*/
 	#header {
 		height: 42px;
