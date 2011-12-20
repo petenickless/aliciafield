@@ -39,6 +39,11 @@
 	
 	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
 	-->	
+	
+	<script type="text/javascript" charset="utf-8">
+		var blog_details = <?php echo json_encode(get_bloginfo('stylesheet_directory')); ?>;
+	</script>
+	
 	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/jquery.js"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/jquery.ba-hashchange.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php ABSPATH; ?>/wp-content/themes/<?php echo get_current_theme(); ?>/assets/js/ajax.js"></script>

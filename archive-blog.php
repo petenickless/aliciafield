@@ -12,7 +12,7 @@
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-			<span id="title"><?php echo strtoupper(get_the_title()); ?></span>
+			<h1 id="title"><a href="<?php the_permalink(); ?>"><?php echo strtoupper(get_the_title()); ?></a></h1>
 			<span id="lh_date"><?php the_date(); ?></span>
 			<?php the_content(); ?>
 		<?php endwhile; ?>

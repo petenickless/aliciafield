@@ -24,12 +24,19 @@
 				<label for="contact_query">Query</label>
 				<textarea id="contact_query" name="contact_query"></textarea>
 			</p>
+			<input type="hidden" name="query_sent" value="true" id="query_sent">
 			<input type="text" style="display:none;" name="botcha" value="gotyah" id="botcha">
 			<p>
 				<input id="contact_submit" type="submit" value="Send Query &rarr;">
 			</p>
 		</form>
+		<div id="contact_thanks">
+			<h1 id="title">THANKS!</h1>
+			<p>We've received your message, we'll be in touch as soon as possible with a response</p>
+			<p>For now, feel free to <a href="/">keep browsing</a></p>
+		</div>
 	</div>
+
 	<div id="rh_sidebar">
 		<span id="title">HATE FORMS?</span>
 		<div id="contact_details">

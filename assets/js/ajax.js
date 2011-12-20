@@ -17,8 +17,15 @@ function getPosition(){
 	return pos = $("#"+current_page_id).position();
 }
 
+function getWidth(){
+	current_page_id = $("#post_content").attr("class");
+	return width = $("#"+current_page_id).width();
+}
+
 function positionNavId(){
 	getPosition();
+	getWidth();
+	console.log(width);
 	left = pos.left;
 	$("#marker").animate({
 		"left": left
@@ -58,4 +65,26 @@ jQuery(document).ready(function($) {
     });
 
     $(window).trigger('hashchange');
+
+	$("#contact_submit").live("click", function(e){
+		e.preventDefault();
+		var contact_name = $('#contact_name').attr('value');
+		var contact_email = $('#contact_email').attr('value');
+		var contact_query = $('#contact_query').attr('value');
+		var botcha = $('#botcha').attr('value');
+		var query_sent = $('#query_sent').attr('value');
+		
+		$.ajax({
+			type: "POST",
+			url: blog_details + "/assets/php/contact_submit.php",
+			data: "contact_name="+ contact_name +"&contact_email="+ contact_email +"&contact_query="+ contact_query+"&botcha="+botcha+"&query_sent="+query_sent,
+			dataType: "html",
+			success: function(){ 
+				$("#contact_form").fadeOut(function(){
+					$("#contact_thanks").fadeIn();
+				});
+				
+			},
+		});
+	});
 });
