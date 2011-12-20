@@ -19,13 +19,14 @@ function getPosition(){
 
 function positionNavId(){
 	getPosition();
-	left = pos.left + 10;
+	left = pos.left;
 	$("#marker").animate({
 		"left": left
 	});
 }
 
 jQuery(document).ready(function($) {
+	load_scroller();
     var $mainContent = $("#content_wrap"),
         siteUrl = "http://" + top.location.host.toString(),
         url = ''; 

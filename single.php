@@ -15,7 +15,7 @@ Page: single.php
 	<div id="post_content" class="<?php echo $id; ?>">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<div id="lh_content">
-			<span id="title"><?php echo strtoupper(get_the_title()); ?></span>
+			<h1 id="title"><?php echo strtoupper(get_the_title()); ?></h1>
 			<span id="lh_date"><?php the_time('j M Y'); ?></span>
 			<?php the_content(); ?>
 			<?php the_category(', '); ?> <?php if(has_tag()) echo" and tagged with: "; the_tags(''); ?>

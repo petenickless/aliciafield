@@ -1,4 +1,7 @@
+
+
 * {
+/*	font-family:centabel;*/
 	font-family:Myriad pro, helvetica, arial, serif;
 }
 
@@ -6,6 +9,11 @@ a{
 	color:#662D91;
 	font-weight:bold;
 	text-decoration:none;
+}
+
+h1 {
+	font-size:1.5em;
+	font-weight:normal;
 }
 /*Shared*/
 .blueline_bottom {
@@ -64,6 +72,7 @@ p {
 		height: 42px;
 		background-color: #FFFFFF;
 		position: relative;
+		margin-bottom:1em;
 	}
 
 	/*Nav*/
@@ -96,7 +105,7 @@ p {
 	#content_wrap {
 		min-height: 485px;
 		background-color:#F2F2F2;
-		padding-top:0.6em;
+/*		padding-top:0.6em;*/
 	}
 	
 	#lh_content {

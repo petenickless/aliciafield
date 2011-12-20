@@ -11,7 +11,7 @@
 		<?php $page_data = get_page_by_title("Contact");?>
 		<?php setup_postdata($page_data); ?>
 		<?php the_content(); ?>
-		<form action="" method="get" accept-charset="utf-8" id="contact_form">
+		<form action="" id="contact_form" method="post">
 			<p>
 				<label for="contact_name">Contact name</label>
 				<input type="text" name="contact_name" value="" id="contact_name">
@@ -23,7 +23,11 @@
 			<p>
 				<label for="contact_query">Query</label>
 				<textarea id="contact_query" name="contact_query"></textarea>
-			<p><input type="submit" value="Continue &rarr;"></p>
+			</p>
+			<input type="text" style="display:none;" name="botcha" value="gotyah" id="botcha">
+			<p>
+				<input id="contact_submit" type="submit" value="Send Query &rarr;">
+			</p>
 		</form>
 	</div>
 	<div id="rh_sidebar">
