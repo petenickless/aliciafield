@@ -20,6 +20,7 @@
 			$categories = get_categories($args);
 			foreach($categories as $category): ?>
 				<div class="pf_cat_wrap column_three">
+					<a href="<?php echo get_category_link($category->cat_ID); ?>">
 					<span id="title"><?php echo strtoupper($category->name); ?></span>
 					<div id="portfolio_thumb_wrap">
 					<?php 
@@ -30,7 +31,6 @@
 						);
 					$one_post = get_posts($cat_args);
 					?>
-					<a href="<?php echo get_category_link($category->cat_ID); ?>">
 						<?php echo get_the_post_thumbnail($one_post[0]->ID, "portfolio"); ?>
 					</a>
 					</div>

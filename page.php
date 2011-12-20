@@ -16,7 +16,7 @@ Page: home.php
 	<div id="post_content" class="<?php echo $id; ?>">
 		<div id="lh_content">
 			<?php setup_postdata($page_data); ?>
-			<span id="title"><?php echo strtoupper(get_the_title()); ?></span>
+			<h1 id="title"><?php echo strtoupper(get_the_title()); ?></h1>
 			<?php the_content(); ?>
 		</div>
 	</div>
