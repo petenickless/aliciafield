@@ -14,9 +14,10 @@ Page: 404.php
 <?php get_header(); ?>
 
 <div id="content_wrap">
-	<h1>Whoops, we haven't found the page your looking for!</h1>
-	
-	<p>Try Searching Instead</p><?php get_search_form(); ?>
+	<div id="lh_content">
+		<h1 id="title">WHOOPS</h1>
+		<p>We haven't found the page your looking for!</p>
+	</div>
 </div> <!--#content_wrap-->
 
 <?php get_footer(); ?>

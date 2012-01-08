@@ -7,7 +7,8 @@ function load_scroller(){
 
         // callback fn that creates a thumbnail to use as pager anchor 
         pagerAnchorBuilder: function(idx, slide) { 
-            return '<div class="thumb"><a href="#"><img src="' + slide.src + '" height="43" /></a></div>'; 
+			//This method of grabbing src is hacky, revisit it...
+            return '<div class="thumb"><a href="#"><img src="' + slide.style.backgroundImage.replace('url("', '').replace('")', '') + '" height="43" /></a></div>'; 
         } 
     });
 }
@@ -25,8 +26,8 @@ function getWidth(){
 function positionNavId(){
 	getPosition();
 	getWidth();
-	console.log(width);
-	left = pos.left;
+	//Sort out left position by finding half and removing width of nav marker.
+	left = pos.left + (width / 2) - 5;
 	$("#marker").animate({
 		"left": left
 	});
@@ -65,6 +66,8 @@ jQuery(document).ready(function($) {
     });
 
     $(window).trigger('hashchange');
+
+	//Deal with ajax contact form...
 
 	$("#contact_submit").live("click", function(e){
 		e.preventDefault();

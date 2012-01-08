@@ -9,6 +9,11 @@ a{
 	text-decoration:none;
 }
 
+body {
+	background-color:#F2F2F2;
+	height:100%;
+}
+
 a:hover{
 	color:#c3c3c3 !important;
 }
@@ -16,6 +21,11 @@ a:hover{
 h1 {
 	font-size:1.5em;
 	font-weight:normal;
+}
+
+strong, label {
+	color:#662D91;
+	font-weight:bold !important;
 }
 /*Shared*/
 .blueline_bottom {
@@ -38,8 +48,8 @@ li {
 }
 
 p {
-	line-height:1.3em;
-	font-size:0.9em;
+    font-size: 0.75em;
+    line-height: 1.6em;
 }
 
 #title {
@@ -50,6 +60,7 @@ p {
     position: relative;
     text-decoration: none;
 	margin-bottom:0.5em;
+	font-weight:normal;
 }
 
 #title:after {
@@ -69,6 +80,14 @@ p {
 	position:relative;
 }
 
+.border {
+    border: 1px solid #662D91;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 2px #c3c3c3 inset;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
 /*Header*/
 	#header {
 		height: 42px;
@@ -85,6 +104,7 @@ p {
 		#navigation li a {
 			text-decoration:none;
 			color:#B3B3B3;
+			font-weight:normal;
 		} 
 
 		#navigation .page_item_title {
@@ -105,9 +125,8 @@ p {
 /*Content*/
 
 	#content_wrap {
-		min-height: 485px;
-		background-color:#F2F2F2;
-/*		padding-top:0.6em;*/
+	    background-color: #F2F2F2;
+	    min-height: 478px;
 	}
 	
 	#lh_content {
@@ -117,7 +136,7 @@ p {
 	
 	#rh_sidebar {
 	    float: right;
-	    margin-top: 100px;
+	    margin-top: 110px;
 	    width: 185px;
 	}
 	
@@ -147,9 +166,9 @@ p {
 	
 	#hp_about_me p {
 		margin-top:0.5em;
-		font-size:0.8em;
+		font-size:0.75em;
 		font-style:oblique;
-		line-height:1.2em;
+		line-height:1.6em;
 	}
 
 	/*Slider*/
@@ -169,15 +188,16 @@ p {
 		}
 		
 		#slider_nav {
-			padding-bottom:3em;
+		   overflow: auto;
+		    padding-bottom: 1em;
 		}
 		
 		.thumb {
 		    float: left;
 		    margin-right: 3px;
 		    overflow: hidden;
-		    width: 43px;
-			height:43px;
+		    width: 41px;
+			height:41px;
 			border:1px solid #F2F2F2;
 			margin-bottom:3px;
 		}
@@ -186,6 +206,14 @@ p {
 			opacity:1;
 			border:1px solid #c3c3c3;
 		}
+		
+		.slide {
+			height: 459px;
+		    width: 759px;
+			background-position:center center;
+			background-repeat:no-repeat;
+			background-color: white;
+		}
 /*Contact*/
 	#contact_form label {
 		display:block;
@@ -193,12 +221,16 @@ p {
 		margin-bottom:0.5em;
 	}
 	
+	#contact_form p {
+		margin-bottom:0;
+	}
+	
 	#contact_form input {
 		width:20em;
 	}
 	
 	#contact_form textarea {
-		width:30em;
+		width:100%;
 		height:10em !important;
 	}
 	
@@ -209,7 +241,7 @@ p {
 	    border: 1px solid #CCCCCC;
 	    border-bottom-left-radius: 3px;
 	    border-top-left-radius: 3px;
-	    box-shadow: 0 1px 2px #EEEEEE inset;
+	    box-shadow: 0 1px 2px #c3c3c3 inset;
 	    font-size: 14px;
 	    height: 32px;
 	    line-height: 30px;
@@ -251,6 +283,10 @@ p {
 		list-style:none;
 	}
 	
+	.pf_cat_wrap {
+		height:10em;
+	}
+	
 /*Blog*/
 
 #lh_date {
@@ -263,7 +299,8 @@ p {
 
 #contact_thanks {
 	display:none;
-	position:absolute;
+/*	position:absolute;*/
+	margin:auto;
 }
 
 #contact_submit {
@@ -305,6 +342,8 @@ p {
 		height:100%;
 		z-index:1;
 		position:relative;
+		overflow:auto;
+		min-height:8em;
 	}
 
 	#footer #footer_container .left .cat-item,  #footer #footer_container .right{

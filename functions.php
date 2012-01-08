@@ -2,7 +2,7 @@
 
 if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'home-slider', 760, false );
+	add_image_size( 'home-slider', 760, 460, false );
 	add_image_size( 'portfolio', 235, false );
 }
 
@@ -56,6 +56,42 @@ function create_post_type() {
 		'supports' => array('title','thumbnail','editor')
 		)
 	);
+}
+
+//Remove all the garbage menu items in the wp editor
+add_action( 'admin_menu', 'remove_menu_pages' );
+
+function remove_menu_pages() {
+	remove_menu_page('link-manager.php');
+	remove_menu_page('tools.php');	
+	remove_menu_page('upload.php');	
+	remove_menu_page('edit-comments.php');	
+	remove_menu_page('edit.php');	
+}
+
+//Add custom meta meta box to portfolio custom post
+add_action("admin_init", "portfolio_meta");
+add_action('save_post', 'save_portfolio_meta_options');
+
+function portfolio_meta(){
+	add_meta_box("event-meta", "Featured", "portfolio_meta_options", "portfolio", "side", "high");
+}
+
+function portfolio_meta_options(){
+	global $post;
+	$custom = get_post_custom($post->ID);
+	$featured = $custom["featured"][0];
+	?>
+		<p>
+			<input type="checkbox" name="featured" value="featured" <?php if($featured == 'featured' || $_POST['featured']) { echo "checked"; }; ?>>
+			<label>Tick this box if you want to feature this image on the homepage</label>
+		</p>
+	<?php
+}
+
+function save_portfolio_meta_options(){
+	global $post;
+	update_post_meta($post->ID, "featured", $_REQUEST['featured']);
 }
 
 function new_excerpt_more($more) {

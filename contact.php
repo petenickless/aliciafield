@@ -30,7 +30,7 @@
 				<input id="contact_submit" type="submit" value="Send Query &rarr;">
 			</p>
 		</form>
-		<div id="contact_thanks">
+		<div id="contact_thanks" class="border">
 			<h1 id="title">THANKS!</h1>
 			<p>We've received your message, we'll be in touch as soon as possible with a response</p>
 			<p>For now, feel free to <a href="/">keep browsing</a></p>

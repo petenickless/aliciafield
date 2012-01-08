@@ -24,7 +24,10 @@ Page: category.php
 				);
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				<?php the_post_thumbnail('home-slider'); ?>
+				<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'home-slider'); ?>
+				<div class="slide" style="background-image:url('<?php echo $large_image_url[0]; ?>');"></div>
+				
+				<?php //the_post_thumbnail('home-slider'); ?>
 			<?php endwhile; ?>
 			<?php wp_reset_query(); ?>
 		</div> <!--#slider_wrap-->
