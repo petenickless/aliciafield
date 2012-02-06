@@ -1,6 +1,7 @@
 * {
 /*	font-family:centabel;*/
-	font-family:Myriad pro, helvetica, arial, serif;
+/*	font-family:Myriad pro, helvetica, arial, serif;*/
+	font-family:Georgia;
 }
 
 a{
@@ -61,6 +62,7 @@ p {
     text-decoration: none;
 	margin-bottom:0.5em;
 	font-weight:normal;
+	font-family:Myriad pro, helvetica, arial, serif;
 }
 
 #title:after {
@@ -68,6 +70,10 @@ p {
     left: 1em;
     position: absolute;
     top: 0.55em;
+}
+
+h1#title:after {
+    top: 0.45em;
 }
 
 #marker {
@@ -105,12 +111,14 @@ p {
 			text-decoration:none;
 			color:#B3B3B3;
 			font-weight:normal;
+			font-family:Myriad pro, helvetica, arial, serif;
 		} 
 
 		#navigation .page_item_title {
 			float:left;
 			list-style:none;
 			margin-right:3em;
+			font-family:Myriad pro, helvetica, arial, serif;
 		}
 /*Sidebar*/
 
@@ -168,7 +176,7 @@ p {
 		margin-top:0.5em;
 		font-size:0.75em;
 		font-style:oblique;
-		line-height:1.6em;
+		line-height:1.4em;
 	}
 
 	/*Slider*/
@@ -179,8 +187,8 @@ p {
 		}
 		
 		#slider_frame {
-		    border: 1px solid #662D91;
-		    box-shadow: 0 0 1px #C9C9C9 inset;
+/*		    border: 1px solid #662D91;*/
+/*		    box-shadow: 0 0 1px #C9C9C9 inset;*/
 		    height: 459px;
 		    position: absolute;
 		    width: 759px;

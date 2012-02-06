@@ -1,13 +1,14 @@
 function load_scroller(){
 	jQuery('#slider_wrap').cycle({ 
         fx:     'scrollRight', 
-        speed:  'slow', 
+        speed:  1000, 
         timeout: 5000, 
         pager:  '#slider_nav', 
 
         // callback fn that creates a thumbnail to use as pager anchor 
         pagerAnchorBuilder: function(idx, slide) { 
 			//This method of grabbing src is hacky, revisit it...
+			console.log(slide.style.backgroundImage.replace('url("', '').replace('")', ''));
             return '<div class="thumb"><a href="#"><img src="' + slide.style.backgroundImage.replace('url("', '').replace('")', '') + '" height="43" /></a></div>'; 
         } 
     });
