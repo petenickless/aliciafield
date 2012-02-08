@@ -62,7 +62,7 @@
 		</div> <!--#header-->
 		<div class="container">
 			<div id="logo">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/afp_logo.png" width="144" height="121" alt="Afp Logo">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/afp_logo.png" width="94" alt="Afp Logo">
 			</div>
 		</div>
 		<div id="content_wrap" class="clearboth">
