@@ -48,6 +48,13 @@ Template Name: Home
 			the_content();
 			?>
 		</div>
+		<div id="hp_latest_news">
+			<span id="title">CONTACT ALICIA</span>
+			<div id="contact_details">
+				<p><strong>Tel:</strong> +44 (0) 7952 467 248</p>
+				<p><strong>Email:</strong> alicia (at) aliciafield.co.uk</p>
+			</div>
+		</div>
 	</div>
 </div>
 <?php get_footer(); ?>
