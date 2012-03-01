@@ -7,9 +7,7 @@ function load_scroller(){
 
         // callback fn that creates a thumbnail to use as pager anchor 
         pagerAnchorBuilder: function(idx, slide) { 
-			//This method of grabbing src is hacky, revisit it...
-			console.log(slide.style.backgroundImage.replace('url("', '').replace('")', ''));
-            return '<div class="thumb"><a href="#"><img src="' + slide.style.backgroundImage.replace('url("', '').replace('")', '') + '" height="43" /></a></div>'; 
+            return '<div class="thumb"><a href="#"><img src="' + slide.title + '" height="43" /></a></div>'; 
         } 
     });
 }
