@@ -35,6 +35,7 @@
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/reset.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/usefulstyle.css" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/wp_style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" />
 	
 	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
@@ -62,7 +63,7 @@
 		</div> <!--#header-->
 		<div class="container">
 			<div id="logo">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/afp_logo.png" width="94" alt="Afp Logo">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo.png" width="94" alt="Afp Logo">
 			</div>
 		</div>
 		<div id="content_wrap" class="clearboth">

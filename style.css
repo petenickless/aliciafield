@@ -176,8 +176,8 @@ h1#title:after {
 	#hp_about_me p {
 		margin-top:0.5em;
 		font-size:0.75em;
-		font-style:oblique;
-		line-height:1.4em;
+	/*	font-style:oblique;*/
+/*		line-height:1.4em;*/
 	}
 
 	/*Slider*/
