@@ -163,7 +163,7 @@ h1#title:after {
 	}
 	
 	#hp_latest_news ul li a {
-		color:#662D91;
+		color:#999;
 		font-weight:bold;
 		text-decoration:none;
 	}
@@ -302,6 +302,13 @@ h1#title:after {
     color: #C3C3C3;
     font-size: 0.8em;
 	line-height:1.5em;
+}
+
+.blog_post #image {
+	height:230px;
+	width:330px;
+	background-position:center center;
+	margin-bottom:1em;
 }
 
 /*Contact*/

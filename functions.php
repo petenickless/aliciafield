@@ -4,6 +4,7 @@ if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' 
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'home-slider', 760, 460, false );
 	add_image_size( 'portfolio', 235, false );
+	add_image_size( 'blog', 337, false);
 }
 
 function get_catID($slug) {
