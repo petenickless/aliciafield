@@ -10,6 +10,14 @@ function load_scroller(){
             return '<div class="thumb"><a href="#"><img src="' + slide.title + '" height="43" /></a></div>'; 
         } 
     });
+
+	jQuery('#static_slider_wrap').cycle({
+	    fx:     'scrollHorz', 
+	    speed:  1000, 
+	    timeout: 0, 
+	    next:   '#next', 
+	    prev:   '#prev' 
+	})
 }
 
 function getPosition(){

@@ -4,6 +4,7 @@ if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' 
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'home-slider', 760, 460, false );
 	add_image_size( 'portfolio', 235, false );
+	add_image_size( 'blog', 337, false);
 }
 
 function get_catID($slug) {
@@ -15,6 +16,14 @@ function p($object) {
 	?><pre><?php
 	print_r($object);
 	?></pre><?php
+}
+
+function checkurl($url){
+	preg_match("#https?\:\/\/#i", $url, $matches);
+	if(!$matches[0]){
+		$url = "http://".$url;
+	}
+	return $url;
 }
 
 function custom_wp_list_pages($args){
@@ -56,6 +65,34 @@ function create_post_type() {
 		'supports' => array('title','thumbnail','editor')
 		)
 	);
+	
+	register_post_type( 'video',
+		array(
+			'labels' => array(
+				'name' => __( 'Video' ),
+				'singular_name' => __( 'Video' )
+			),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'video'),
+		'taxonomies' => array('post_tag'), // this is IMPORTANT
+		'supports' => array('title')
+		)
+	);
+	
+	register_post_type( 'Recent Projects',
+		array(
+			'labels' => array(
+				'name' => __( 'Recent Projects' ),
+				'singular_name' => __( 'Recent Project' )
+			),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'recent-projects'),
+		'taxonomies' => array('post_tag'), // this is IMPORTANT
+		'supports' => array('title','thumbnail','editor')
+		)
+	);
 }
 
 //Remove all the garbage menu items in the wp editor
@@ -92,6 +129,39 @@ function portfolio_meta_options(){
 function save_portfolio_meta_options(){
 	global $post;
 	update_post_meta($post->ID, "featured", $_REQUEST['featured']);
+}
+
+//Add custom meta meta box to vidoe custom post
+add_action("admin_init", "video_meta");
+add_action('save_post', 'save_video_meta_options');
+
+function video_meta(){
+	add_meta_box("event-meta", "Featured", "video_meta_options", "video", "side", "high");
+}
+
+function video_meta_options(){
+	global $post;
+	$custom = get_post_custom($post->ID);
+	$vimeo_url = $custom["vimeo_url"][0];
+	?>
+		<p>
+			<label><a href="http://vimeo.com">Vimeo</a> Video URL</label>
+			<input type="text" name="vimeo_url" value="<?php echo $vimeo_url; ?>">
+		</p>
+		<?php if($vimeo_url) { render_video($vimeo_url, 260, 150); } ?>
+	<?php
+}
+
+function save_video_meta_options(){
+	global $post;
+	update_post_meta($post->ID, "vimeo_url", checkurl($_REQUEST['vimeo_url']));
+}
+
+function render_video($url, $width, $height){
+	$embed = str_replace('vimeo.com','player.vimeo.com/video' ,$url);
+	?>
+		<iframe src="<?php echo $embed ?>" width="<?php echo $width ?>" height="<?php echo $height ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	<?php
 }
 
 function new_excerpt_more($more) {
