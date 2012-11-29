@@ -52,7 +52,7 @@ Template Name: Home
 			<span id="title">CONTACT ALICIA</span>
 			<div id="contact_details">
 				<p><strong>Tel:</strong> +44 (0) 7952 467 248</p>
-				<p><strong>Email:</strong> alicia (at) aliciafield.co.uk</p>
+				<p><strong>Email:</strong>field.alicia@yahoo.co.uk</p>
 			</div>
 		</div>
 	</div>

@@ -13,7 +13,6 @@
 	    'X-Mailer: PHP/' . phpversion();
 	
 	if(isset($email) & ($botcha == "gotyah")) {
-		echo "were in";
-		mail('petenickless@gmail.com', $subject, $message, $headers);
+		mail('petenickless@gmail.com,field.alicia@yahoo.co.uk', $subject, $message, $headers);
 	}
 ?>
