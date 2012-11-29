@@ -79,6 +79,20 @@ function create_post_type() {
 		'supports' => array('title')
 		)
 	);
+	
+	register_post_type( 'Recent Projects',
+		array(
+			'labels' => array(
+				'name' => __( 'Recent Projects' ),
+				'singular_name' => __( 'Recent Project' )
+			),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'recent-projects'),
+		'taxonomies' => array('post_tag'), // this is IMPORTANT
+		'supports' => array('title','thumbnail','editor')
+		)
+	);
 }
 
 //Remove all the garbage menu items in the wp editor

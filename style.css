@@ -412,3 +412,13 @@ h1#title:after {
 #next:hover, #prev:hover {
 	opacity:0.75;
 }
+
+/* Recent Projects */
+
+.caption {
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	width: 727px;
+	padding: 1em;
+}
