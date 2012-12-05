@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<div id="post_content" class="117">
+<div id="post_content" class="812">
 	<div id="lh_content">
 		<?php setup_postdata($page_data); ?>
 		<?php the_content(); ?>
