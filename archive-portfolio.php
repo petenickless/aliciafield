@@ -44,6 +44,21 @@
 					</div>
 				</a>
 			</div>
+			<div class="pf_cat_wrap column_three">
+				<a href="<?php echo get_bloginfo("url") ?>/recent-projects">
+					<span id="title">RECENT PROJECTS</span>
+					<div id="portfolio_thumb_wrap">
+						<?php 
+						$rp_args = array(
+							"numberposts" => 1,
+							"post_type" => "recent projects"
+							);
+						$rp_post = get_posts($rp_args);
+						?>
+						<?php echo get_the_post_thumbnail($rp_post[0]->ID, "portfolio"); ?>
+					</div>
+				</a>
+			</div>
 	</div>
 	<div id="rh_sidebar">
 		<span id="title">PORTFOLIO</span>
