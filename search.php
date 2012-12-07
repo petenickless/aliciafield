@@ -14,7 +14,7 @@ Page: archive.php
 
 <div id="post_content">
 	<div id="lh_content">
-		asdfasdf
+
 	</div>
 	
 </div>

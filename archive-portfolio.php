@@ -36,6 +36,14 @@
 					</div>
 				</div>
 			<?php endforeach; ?>
+			<div class="pf_cat_wrap column_three">
+				<a href="<?php echo get_bloginfo("url") ?>/video">
+					<span id="title">VIDEOS</span>
+					<div id="portfolio_thumb_wrap">
+
+					</div>
+				</a>
+			</div>
 	</div>
 	<div id="rh_sidebar">
 		<span id="title">PORTFOLIO</span>
@@ -45,6 +53,9 @@
 			"title_li" => ""
 			);
 		wp_list_categories( $args ); ?>
+		<li class="cat-item"> 
+			<a href="<?php echo get_bloginfo("url") ?>/recent-projects">Recent Projects</a>	
+		</li>
 	</div>
 </div>
 

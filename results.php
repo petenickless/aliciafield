@@ -14,7 +14,7 @@ Page: results.php
 <?php get_header(); ?>
 <div id="post_content">
 	<div id="lh_content">
-		asdfasdf
+
 	</div>
 	
 </div>

@@ -12,7 +12,7 @@ Page: archive.php
 ?>
 <div id="post_content" class="<?php wp_reset_query();  echo $post->ID; ?>">
 	<div id="lh_content">
-		asdfasdf
+HELLO
 	</div>
 	
 </div>
