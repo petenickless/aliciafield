@@ -59,12 +59,28 @@
 					</div>
 				</a>
 			</div>
+			<div class="pf_cat_wrap column_three">
+				<a href="<?php echo get_bloginfo("url") ?>/category/archive/">
+					<span id="title">ARCHIVE</span>
+					<div id="portfolio_thumb_wrap">
+						<?php 
+						$a_args = array(
+							"category" => 8,
+							"numberposts" => 1,
+							"post_type" => "portfolio"
+							);
+						$a_post = get_posts($a_args);
+						?>
+						<?php wp_reset_query(); ?>
+						<?php echo get_the_post_thumbnail($a_post[0]->ID, "portfolio"); ?>
+					</div>
+				</a>
+			</div>
 	</div>
 	<div id="rh_sidebar">
 		<span id="title">PORTFOLIO</span>
 		<?php 
 		$args = array(
-			"exclude" => "1",
 			"title_li" => ""
 			);
 		wp_list_categories( $args ); ?>
