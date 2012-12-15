@@ -87,6 +87,10 @@
 		<li class="cat-item"> 
 			<a href="<?php echo get_bloginfo("url") ?>/recent-projects">Recent Projects</a>	
 		</li>
+		<li class="cat-item">
+                        <a href="<?php echo get_bloginfo("url") ?>/video">Videos</a>
+                </li>
+	
 	</div>
 </div>
 
