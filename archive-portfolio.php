@@ -40,7 +40,7 @@
 				<a href="<?php echo get_bloginfo("url") ?>/video">
 					<span id="title">VIDEOS</span>
 					<div id="portfolio_thumb_wrap">
-
+						<img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/video.png" class="attachment-portfolio wp-post-image" alt="IMG_66582" title="IMG_66582">
 					</div>
 				</a>
 			</div>
