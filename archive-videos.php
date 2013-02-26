@@ -6,7 +6,9 @@
 
 <?php get_header(); ?>
 
-<div id="post_content" class="101">
+<?php $page = get_page_by_title('Video') ?>
+
+<div id="post_content" class="<?php echo $page->ID ?>">
 	<div id="lh_content">
 		<?php $page_data = get_page_by_title("Video");?>
 		<?php setup_postdata($page_data); ?>

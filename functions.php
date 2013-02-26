@@ -80,17 +80,17 @@ function create_post_type() {
 		)
 	);
 	
-	register_post_type( 'Recent Projects',
+	register_post_type( 'Projects',
 		array(
 			'labels' => array(
-				'name' => __( 'Recent Projects' ),
-				'singular_name' => __( 'Recent Project' )
+				'name' => __( 'Projects' ),
+				'singular_name' => __( 'Project' )
 			),
 		'public' => true,
 		'has_archive' => true,
-		'rewrite' => array('slug' => 'recent-projects'),
-		'taxonomies' => array('post_tag'), // this is IMPORTANT
-		'supports' => array('title','thumbnail','editor')
+		'rewrite' => array('slug' => 'projects'),
+		'taxonomies' => array('category'), // this is IMPORTANT
+		'supports' => array('title','thumbnail')
 		)
 	);
 }

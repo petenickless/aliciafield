@@ -11,11 +11,13 @@
 		<?php $page_data = get_page_by_title("Portfolio");?>
 		<?php setup_postdata($page_data); ?>
 		<?php the_content(); ?>
+		<?php $portfolio_cat = get_category_by_slug('Portfolio'); ?>
 		<?php 
 			$args = array(
-			  'orderby' => 'name',
-			  'order' => 'ASC',
-				'exclude' => "1"
+			  	'orderby' => 'name',
+			  	'order' => 'ASC',
+				'exclude' => "1",
+				'child_of' => $portfolio_cat->term_id
 			  );
 			$categories = get_categories($args);
 			foreach($categories as $category): ?>

@@ -5,7 +5,10 @@
 ?>
 
 <?php get_header(); ?>
-<div id="post_content" class="15">
+
+<?php $page = get_page_by_title('Blog') ?>
+
+<div id="post_content" class="<?php echo $page->ID ?>">
 	<div id="lh_content">
 		<?php
 		$args = array( 'post_type' => 'blog', 'posts_per_page' => -1 );

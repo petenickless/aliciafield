@@ -1,53 +1,98 @@
 <?php
 /*
-	Template name: Recent Projects
+	Template name: Portfolio
 */
 ?>
 
 <?php get_header(); ?>
 
-<div id="post_content" class="812">
+<div id="post_content" class="144">
 	<div id="lh_content">
+		<?php $page_data = get_page_by_title("Portfolio");?>
 		<?php setup_postdata($page_data); ?>
 		<?php the_content(); ?>
-		<div id="slider_frame"></div>
-		<div id="slider_wrap">
-			<?php
+		<?php $projects = get_category_by_slug('projects'); ?>
+		<?php 
 			$args = array(
-				'post_type' => 'recent projects', 
-				'posts_per_page' => -1
-				);
-			$loop = new WP_Query( $args );
-			while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'home-slider'); ?>
-				<div class="slide" style="background-image:url('<?php echo $large_image_url[0]; ?>');" title="<?php echo $large_image_url[0]; ?>">
-					<div class="caption">
-						<h1 id="title"><?php echo strtoupper(get_the_title()); ?></h1>
-						<?php the_content() ?>
+			  	'orderby' => 'name',
+			  	'order' => 'ASC',
+				'exclude' => "1",
+				'child_of' => $projects->term_id
+			  );
+			$categories = get_categories($args);
+			foreach($categories as $category): ?>
+				<div class="pf_cat_wrap column_three">
+					<a href="<?php echo get_category_link($category->cat_ID); ?>">
+					<span id="title"><?php echo strtoupper($category->name); ?></span>
+					<div id="portfolio_thumb_wrap">
+					<?php 
+					$cat_args = array(
+						"category" => $category->cat_ID, 
+						"numberposts" => 1,
+						"post_type" => "portfolio"
+						);
+					$one_post = get_posts($cat_args);
+					?>
+						<?php echo get_the_post_thumbnail($one_post[0]->ID, "portfolio"); ?>
+					</a>
 					</div>
 				</div>
-			<?php endwhile; ?>
-		</div> <!--#slider_wrap-->
-		</div>
-		<div id="rh_sidebar">
-			<span id="title">OTHER RECENT PROJECTS</span>
-			<div id="hp_latest_news">
-			<ul>
-			<?php
-			wp_reset_query();
-			$args = array( 'post_type' => 'recent projects', 'posts_per_page' => -1, 'offset' => 2 );
-			$loop = new WP_Query( $args );
-			while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				<span class="hp_date"><?php the_date(); ?></span>
-				<li>
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				</li>
-				<?php //the_content(); ?>
-			<?php endwhile; ?>
-			</ul>
+			<?php endforeach; ?>
+			<div class="pf_cat_wrap column_three">
+				<a href="<?php echo get_bloginfo("url") ?>/video">
+					<span id="title">VIDEOS</span>
+					<div id="portfolio_thumb_wrap">
+						<img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/video.png" class="attachment-portfolio wp-post-image" alt="IMG_66582" title="IMG_66582">
+					</div>
+				</a>
 			</div>
-			<?php wp_reset_query(); ?>
-		
+			<div class="pf_cat_wrap column_three">
+				<a href="<?php echo get_bloginfo("url") ?>/recent-projects">
+					<span id="title">RECENT PROJECTS</span>
+					<div id="portfolio_thumb_wrap">
+						<?php 
+						$rp_args = array(
+							"numberposts" => 1,
+							"post_type" => "recent projects"
+							);
+						$rp_post = get_posts($rp_args);
+						?>
+						<?php echo get_the_post_thumbnail($rp_post[0]->ID, "portfolio"); ?>
+					</div>
+				</a>
+			</div>
+			<div class="pf_cat_wrap column_three">
+				<a href="<?php echo get_bloginfo("url") ?>/category/archive/">
+					<span id="title">ARCHIVE</span>
+					<div id="portfolio_thumb_wrap">
+						<?php 
+						$a_args = array(
+							"category" => 8,
+							"numberposts" => 1,
+							"post_type" => "portfolio"
+							);
+						$a_post = get_posts($a_args);
+						?>
+						<?php wp_reset_query(); ?>
+						<?php echo get_the_post_thumbnail($a_post[0]->ID, "portfolio"); ?>
+					</div>
+				</a>
+			</div>
+	</div>
+	<div id="rh_sidebar">
+		<span id="title">PORTFOLIO</span>
+		<?php 
+		$args = array(
+			"title_li" => ""
+			);
+		wp_list_categories( $args ); ?>
+		<li class="cat-item"> 
+			<a href="<?php echo get_bloginfo("url") ?>/recent-projects">Recent Projects</a>	
+		</li>
+		<li class="cat-item">
+                        <a href="<?php echo get_bloginfo("url") ?>/video">Videos</a>
+                </li>
+	
 	</div>
 </div>
 
