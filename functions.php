@@ -52,19 +52,19 @@ function create_post_type() {
 		)
 	);
 	
-	register_post_type( 'blog',
-		array(
-			'labels' => array(
-				'name' => __( 'Blog' ),
-				'singular_name' => __( 'Blog' )
-			),
-		'public' => true,
-		'has_archive' => true,
-		'rewrite' => array('slug' => 'blog'),
-		'taxonomies' => array('post_tag'), // this is IMPORTANT
-		'supports' => array('title','thumbnail','editor')
-		)
-	);
+	// register_post_type( 'blog',
+	// 	array(
+	// 		'labels' => array(
+	// 			'name' => __( 'Blog' ),
+	// 			'singular_name' => __( 'Blog' )
+	// 		),
+	// 	'public' => true,
+	// 	'has_archive' => true,
+	// 	'rewrite' => array('slug' => 'blog'),
+	// 	'taxonomies' => array('post_tag'), // this is IMPORTANT
+	// 	'supports' => array('title','thumbnail','editor')
+	// 	)
+	// );
 	
 	register_post_type( 'video',
 		array(
