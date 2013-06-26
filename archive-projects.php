@@ -33,12 +33,13 @@
 					$cat_args = array(
 						"category" => $category->cat_ID, 
 						"numberposts" => 1,
-						"post_type" => "portfolio"
+						"post_type" => "projects"
 						);
 					$one_post = get_posts($cat_args);
 					?>
 						<?php echo get_the_post_thumbnail($one_post[0]->ID, "portfolio"); ?>
-					</a>
+						<?php wp_reset_query(); ?>					
+</a>
 					</div>
 				</div>
 			<?php endforeach; ?>
@@ -54,12 +55,6 @@
 				'child_of' => $project_cat->term_id
 			);
 		wp_list_categories( $args ); ?>
-		<li class="cat-item"> 
-			<a href="<?php echo get_bloginfo("url") ?>/recent-projects">Recent Projects</a>	
-		</li>
-		<li class="cat-item">
-                        <a href="<?php echo get_bloginfo("url") ?>/video">Videos</a>
-                </li>
 	
 	</div>
 </div>

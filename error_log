@@ -1,2 +1,4 @@
 [16-May-2012 20:51:27] PHP Fatal error:  Call to undefined function get_header() in /home/aliciaf/public_html/wp-content/themes/aliciafield/index.php on line 13
 [26-Sep-2012 22:20:35] PHP Fatal error:  Call to undefined function get_header() in /home/aliciaf/public_html/wp-content/themes/aliciafield/index.php on line 13
+[25-Apr-2013 09:38:22] PHP Fatal error:  Call to undefined function get_header() in /home/aliciaf/public_html/wp-content/themes/aliciafield/index.php on line 13
+[09-May-2013 20:29:08] PHP Fatal error:  Call to undefined function get_header() in /home/aliciaf/public_html/wp-content/themes/aliciafield/index.php on line 13

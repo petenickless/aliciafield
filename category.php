@@ -59,8 +59,19 @@ if($parent_category->slug == "portfolio"){
 			<span id="title">PORTFOLIO</span>
 			<?php wp_list_categories("exclude=1&title_li="); ?>
 		<?php elseif($parent_category->slug == "projects"): ?>
-			<span id="title">PROJECTS</span>
+			<span id="title"><?php echo strtoupper(single_cat_title('',false)); ?></span>
 			<?php echo category_description($cat) ?>
+			<span id="title">OTHER PROJECTS</span>
+			<?php $project_cat = get_category_by_slug('projects'); ?>
+			<?php $args = array(
+				"title_li" => "",
+				'orderby' => 'name',
+			  	'order' => 'ASC',
+				'exclude' => "1",
+				'child_of' => $project_cat->term_id
+			);
+			wp_list_categories( $args ); ?>		
+			<br/>
 		<?php endif; ?>
 
 	</div>

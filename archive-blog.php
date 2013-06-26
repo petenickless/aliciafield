@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<?php $page = get_page_by_title('Blog') ?>
+<?php $page = get_page_by_title('News') ?>
 
 <div id="post_content" class="<?php echo $page->ID ?>">
 	<div id="lh_content">

@@ -47,13 +47,13 @@
 				</a>
 			</div>
 			<div class="pf_cat_wrap column_three">
-				<a href="<?php echo get_bloginfo("url") ?>/recent-projects">
-					<span id="title">RECENT PROJECTS</span>
+				<a href="<?php echo get_bloginfo("url") ?>/projects">
+					<span id="title">PROJECTS</span>
 					<div id="portfolio_thumb_wrap">
 						<?php 
 						$rp_args = array(
 							"numberposts" => 1,
-							"post_type" => "recent projects"
+							"post_type" => "projects"
 							);
 						$rp_post = get_posts($rp_args);
 						?>
@@ -67,7 +67,7 @@
 					<div id="portfolio_thumb_wrap">
 						<?php 
 						$a_args = array(
-							"category" => 8,
+							"category" => 1,
 							"numberposts" => 1,
 							"post_type" => "portfolio"
 							);
@@ -83,12 +83,10 @@
 		<span id="title">PORTFOLIO</span>
 		<?php 
 		$args = array(
-			"title_li" => ""
+			"title_li" => "",
+			"child_of" => 25
 			);
 		wp_list_categories( $args ); ?>
-		<li class="cat-item"> 
-			<a href="<?php echo get_bloginfo("url") ?>/recent-projects">Recent Projects</a>	
-		</li>
 		<li class="cat-item">
                         <a href="<?php echo get_bloginfo("url") ?>/video">Videos</a>
                 </li>
