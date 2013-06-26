@@ -57,7 +57,10 @@
 	<div id="wrap">
 		<div id="header" class="blueline_bottom">
 			<div class="container">
-				<div id="navigation"><?php custom_wp_list_pages('title_li=&sort_column=menu_order&parent=0'); ?></div>
+				<div id="navigation">
+					<?php custom_wp_list_pages('title_li=&sort_column=menu_order&parent=0'); ?>
+					<li class="page_item_title" id="15"><a href="http://photoaf.tumblr.com/">BLOG</a></li>
+				</div>
 				<div id="marker"></div>
 			</div>
 		</div> <!--#header-->
